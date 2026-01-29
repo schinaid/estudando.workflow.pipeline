@@ -22,6 +22,7 @@ jobs:
   segundo_job:
     name: "instalando o ambiente de nodejs"
     runs-on: ubuntu-latest
+    needs: [primeiro_job]
     steps:
       - name: "verificando a versao no nodejs instalado"
         run: node --version
